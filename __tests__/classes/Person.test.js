@@ -1,5 +1,5 @@
 const Person = require('../../classes/Person')
-const Bag = require()
+const Bag = require('../../classes/Bag')
 
 describe('Person Class Tests', () => {
 
@@ -19,7 +19,9 @@ describe('Person Class Tests', () => {
     })
 
     test('addBag adds a bag to the bags array', () => {
-        p1.addBag('Venci')
-        expect(p1.getBags().length).toEqual(1)
+        const bag = new Bag (45, 7451)
+        p1.addBag(bag)
+        expect(p1.getBags()).toContain(bag)
     })
+
 })

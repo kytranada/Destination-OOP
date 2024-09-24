@@ -19,8 +19,9 @@ describe('Bag Class Tests', () => {
     })
 
     test('Updates owner with Person instance', () => {
-        const b2 = new Person ('John Willis')
-        expect(b2).toBeInstanceOf(Person)
+        const person = new Person ('John Willis', 'NYC')
+        b1.assignOwner(person)
+        expect(b1.getOwner()).toBe(person)
     })
 
 })

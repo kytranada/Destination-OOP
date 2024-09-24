@@ -1,9 +1,18 @@
-const Person = require('../classes/Person')
+class Plane{
+#passengers = []
+    constructor(company,origin,destination){
+        this.company = company
+        this.origin = origin
+        this.destination = destination
+    }
 
-class Plane extends Person {
+    getPassengers(){
+        return this.#passengers
+    }
 
-
-
+    addPassenger(passenger){
+        this.#passengers.push(passenger)
+    }
 
 }
 
